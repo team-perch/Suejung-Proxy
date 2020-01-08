@@ -12,7 +12,7 @@ const port = 3000;
 app.listen(port, console.log(`listening on ${port}`));
 
 const options = {
-  target: 'http://localhost:3001/',
+  target: 'http://3.15.39.58:3001/',
   changeOrigin: true,
   ws: true,
 };
