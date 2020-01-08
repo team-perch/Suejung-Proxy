@@ -11,6 +11,9 @@ app.use(express.static(path.resolve(__dirname, '..', 'public')));
 const port = 3000;
 app.listen(port, console.log(`listening on ${port}`));
 
+
+// Suejung payment calculator service
+
 const options = {
   target: 'http://3.15.39.58:3001/',
   changeOrigin: true,
@@ -19,3 +22,15 @@ const options = {
 
 const apiProxy = proxy(options);
 app.use('/', apiProxy);
+
+
+// Laurence images service
+
+const optionsImages = {
+  target: 'http://52.9.82.201:3003/',
+  changeOrigin: true,
+  ws: true,
+};
+
+const apiProxyImages = proxy(optionsImages);
+app.use('/api/images/', apiProxyImages);
