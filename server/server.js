@@ -13,7 +13,6 @@ app.listen(port, console.log(`listening on ${port}`));
 
 
 // Suejung payment calculator service
-
 const options = {
   target: 'http://3.15.39.58:3001/',
   changeOrigin: true,
@@ -21,11 +20,10 @@ const options = {
 };
 
 const apiProxy = proxy(options);
-app.use('/', apiProxy);
+app.use('/api/costHomeOwnership', apiProxy);
 
 
 // Laurence images service
-
 const optionsImages = {
   target: 'http://52.9.82.201:3003/',
   changeOrigin: true,
@@ -33,11 +31,10 @@ const optionsImages = {
 };
 
 const apiProxyImages = proxy(optionsImages);
-app.use('/', apiProxyImages);
+app.use('/api/images', apiProxyImages);
 
 
 // Peter graph service
-
 const optionsGraph = {
   target: 'http://54.67.110.125:3002/',
   changeOrigin: true,
@@ -45,5 +42,5 @@ const optionsGraph = {
 };
 
 const apiProxyGraph = proxy(optionsGraph);
-app.use('/', apiProxyGraph);
+app.use('/api/estimates', apiProxyGraph);
 
