@@ -7,6 +7,7 @@ const proxy = require('http-proxy-middleware');
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, '..', 'public')));
+app.use('/loaderio-f0086ec9e4d48eb5717e927ae53cbcb1.txt', express.static(path.resolve(__dirname, '..', 'loaderio-f0086ec9e4d48eb5717e927ae53cbcb1.txt')));
 
 const port = 3000;
 app.listen(port, console.log(`listening on ${port}`));
