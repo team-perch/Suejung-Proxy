@@ -33,17 +33,17 @@ const optionsImages = {
 };
 
 const apiProxyImages = proxy(optionsImages);
-app.use('/api/images/', apiProxyImages);
+app.use('/', apiProxyImages);
 
 
 // Peter graph service
 
 const optionsGraph = {
-  target: 'http://52.9.82.201:3003/',
+  target: 'http://54.67.110.125:3002/',
   changeOrigin: true,
   ws: true,
 };
 
 const apiProxyGraph = proxy(optionsGraph);
-app.use('/api/images/', apiProxyGraph);
+app.use('/', apiProxyGraph);
 
