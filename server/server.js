@@ -34,3 +34,16 @@ const optionsImages = {
 
 const apiProxyImages = proxy(optionsImages);
 app.use('/api/images/', apiProxyImages);
+
+
+// Peter graph service
+
+const optionsGraph = {
+  target: 'http://52.9.82.201:3003/',
+  changeOrigin: true,
+  ws: true,
+};
+
+const apiProxyGraph = proxy(optionsGraph);
+app.use('/api/images/', apiProxyGraph);
+
