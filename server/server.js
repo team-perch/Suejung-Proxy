@@ -15,7 +15,7 @@ app.listen(port, console.log(`listening on ${port}`));
 
 // Suejung payment calculator service
 const options = {
-  target: 'http://18.219.124.97:80/',
+  target: 'http://18.224.55.97:80/',
   changeOrigin: true,
   ws: true,
 };
